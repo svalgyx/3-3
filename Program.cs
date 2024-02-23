@@ -39,10 +39,10 @@ namespace HW3_3
                 arrays[i].Print();
                 Console.WriteLine($"The average is: {arrays[i].Average()}");
             }
-            WeekDay[] week_days = { new WeekDay("Monday"), new WeekDay("Tuesday"), new WeekDay("Wednesday"), new WeekDay("Thursday"), new WeekDay("Friday"), new WeekDay("Saturday"), new WeekDay("Sunday")};
+            WeekDay[] days = { new WeekDay("Monday"), new WeekDay("Tuesday"), new WeekDay("Wednesday"), new WeekDay("Thursday"), new WeekDay("Friday"), new WeekDay("Saturday"), new WeekDay("Sunday")};
             Console.WriteLine("Printing days of the week: ");
-            for (int i = 0; i < week_days.Length; i++) {
-                week_days[i].Print();
+            for (int i = 0; i < days.Length; i++) {
+                days[i].Print();
             }
             Console.ReadLine();
         }
