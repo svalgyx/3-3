@@ -1,6 +1,6 @@
 namespace HW3_3
 {
-    public sealed class SingleArray : ArrayBase, ISingleArray
+    public sealed class Single : Array, ISingle
     {
         private int Len { get; set; }
         private int[] array;
