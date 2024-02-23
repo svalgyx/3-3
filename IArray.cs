@@ -1,6 +1,6 @@
 namespace HW3_3
 {
-    public interface IArrayBase : IPrinter
+    public interface IArray : IPrinter
     {
         bool Init { get; }
 
@@ -8,8 +8,8 @@ namespace HW3_3
 
         double Average();
 
-        void CreateByRandom();
+        void RandomAr();
 
-        void CreateByUser();
+        void UserAr();
     }
 }
