@@ -49,7 +49,7 @@ namespace HW3_3
 
         public override void Print()
         {
-            Console.WriteLine("two-dimensional array: ");
+            Console.WriteLine("matrix: ");
             for (int i = 0; i < Rows; i++)
             {
                 string row = "";
