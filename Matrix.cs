@@ -1,18 +1,18 @@
 namespace HW3_3
 {
-    public sealed class MatrixArray : ArrayBase, IMatrixArray
+    public sealed class Matrix : Array, IMatrix
     {
         private int Rows {  get; set; }
         private int Columns { get; set; }
         private int[,] array;
-        public MatrixArray(string init, int rows, int columns) : base(init)
+        public Matrix(string init, int rows, int columns) : base(init)
         {
             Rows = rows;
             Columns = columns;
             array = new int[rows, columns];
         }
 
-        public override void CreateByUser() {
+        public override void UserAr() {
             for (int i = 0; i < Rows; i++)
             {
                 string row = Console.ReadLine();
@@ -24,8 +24,8 @@ namespace HW3_3
             }
         }
 
-        public override void CreateByRandom() {
-            Random rnd = new Random();
+        public override void RandomAr() {
+            Rnd rnd = new Rnd();
             for (int i = 0; i < Rows; i++)
             {
                 for (int j = 0; j < Columns; j++)
@@ -39,17 +39,17 @@ namespace HW3_3
         {
             if (base.Init)
             {
-                CreateByUser();
+                UserAr();
             }
             else
             {
-                CreateByRandom();
+                RandomAr();
             }
         }
 
         public override void Print()
         {
-            Console.WriteLine("Printing two-dimensional array: ");
+            Console.WriteLine("two-dimensional array: ");
             for (int i = 0; i < Rows; i++)
             {
                 string row = "";
@@ -71,13 +71,13 @@ namespace HW3_3
                     sum += array[i, j];
                 }
             }
-            Console.WriteLine("Counted the average value of the array: ");
+            Console.WriteLine("Average: ");
             return (double)sum / (double)(Rows * Columns);
         }
 
-        public void PrintInSnakePattern()
+        public void SnakeMatrix()
         {
-            Console.WriteLine("Printing two-dimensional array in a snake pattern: ");
+            Console.WriteLine("matrix in a snake pattern: ");
             for (int i = 0; i < Rows; i++)
             {
                 string row = "";
