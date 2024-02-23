@@ -1,6 +1,6 @@
 namespace HW3_3
 {
-    public interface IPrinter
+    public interface IPrint
     {
         void Print();
     }
