@@ -1,6 +1,6 @@
 namespace HW3_3
 {
-    public interface IMatrixArray
+    public interface IMatrix
     {
         void PrintInSnakePattern();
     }
