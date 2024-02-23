@@ -77,7 +77,7 @@ namespace HW3_3
 
         public void SnakeMatrix()
         {
-            Console.WriteLine("matrix in a snake pattern: ");
+            Console.WriteLine("matrix in snake pattern: ");
             for (int i = 0; i < Rows; i++)
             {
                 string row = "";
