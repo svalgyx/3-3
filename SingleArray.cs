@@ -19,7 +19,7 @@ namespace HW3_3
         }
 
         public override void RandomAr() {
-            Random rnd = new Random();
+            Rnd rnd = new Rnd();
             for (int i = 0; i < Len; i++)
             {
                 array[i] = rnd.Next(0, 1000);
@@ -30,17 +30,17 @@ namespace HW3_3
         {
             if (base.Init)
             {
-                CreateByUser();
+                UserAr();
             }
             else
             {
-                CreateByRandom();
+                RandomAr();
             }
         }
 
         public override void Print()
         {
-            Console.WriteLine("Printing single array: ");
+            Console.WriteLine("single array: ");
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + " ");
@@ -55,7 +55,7 @@ namespace HW3_3
             {
                 sum += array[i];
             }
-            Console.WriteLine("Counted the average value of the array: ");
+            Console.WriteLine("average: ");
             return (double)sum / (double)(Len);
         }
 
@@ -86,7 +86,7 @@ namespace HW3_3
             int[] clear_array_result = new int[count];
             Array.Copy(clear_array, 0, clear_array_result, 0, count);
             array = clear_array_result;
-            Console.WriteLine("All repeated elements were deleted from the array");
+            Console.WriteLine("repeated elements deleted");
         }
     }
 }
