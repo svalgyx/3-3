@@ -73,19 +73,19 @@ namespace HW3_3
 
         public void ClearAr()
         {
-            int[] clear_array = new int[array.Length];
+            int[] clear_ar = new int[array.Length];
             int count = 0;
             for (int i = 0; i < Len; i++)
             {
-                if (!(ContainsStopIndex(clear_array, array[i], count)))
+                if (!(ContainsStopIndex(clear_ar, array[i], count)))
                 {
-                    clear_array[count] = array[i];
+                    clear_ar[count] = array[i];
                     count++;
                 }
             }
-            int[] clear_array_result = new int[count];
-            Array.Copy(clear_array, 0, clear_array_result, 0, count);
-            array = clear_array_result;
+            int[] clear_ar_result = new int[count];
+            Array.Copy(clear_ar, 0, clear_ar_result, 0, count);
+            array = clear_ar_result;
             Console.WriteLine("repeated elements deleted");
         }
     }
