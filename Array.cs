@@ -1,6 +1,6 @@
 namespace HW3_3
 {
-    public abstract class ArrayBase : IArrayBase
+    public abstract class Array : IArrayBase
     {
         public bool Init { get; set; }
 
@@ -8,11 +8,11 @@ namespace HW3_3
 
         public abstract double Average();
 
-        public abstract void CreateByRandom();
+        public abstract void RandomAr();
 
-        public abstract void CreateByUser();
+        public abstract void UserAr();
 
-        public ArrayBase(string init)
+        public Array(string init)
         {
             Init = true;
             if (init == "no")
