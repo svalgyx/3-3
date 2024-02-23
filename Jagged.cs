@@ -1,17 +1,17 @@
 namespace HW3_3
 {
-    public sealed class JaggedArray : ArrayBase, IJaggedArray
+    public sealed class Jagged : Array, IJagged
     {
         private int Rows { get; set; }
         private int[][] array;
 
-        public JaggedArray(string init, int rows) : base(init)
+        public Jagged(string init, int rows) : base(init)
         {
             Rows = rows;
             array = new int[rows][];
         }
 
-        public override void CreateByUser() {
+        public override void UserAr() {
             for (int i = 0; i < Rows; i++)
             {
                 string row = Console.ReadLine();
@@ -24,8 +24,8 @@ namespace HW3_3
             }
         }
 
-        public override void CreateByRandom() {
-            Random rnd = new Random();
+        public override void RandomAr() {
+            Rnd rnd = new Rnd();
             for (int i = 0; i < Rows; i++)
             {
                 int array_row_len = rnd.Next(1, 10);
@@ -41,17 +41,17 @@ namespace HW3_3
         {
             if (base.Init)
             {
-                CreateByUser();
+                UserAr();
             }
             else
             {
-                CreateByRandom();
+                RandomAr();
             }
         }
 
         public override void Print()
         {
-            Console.WriteLine("Printing jagged array: ");
+            Console.WriteLine("jagged array: ");
             for (int i = 0; i < Rows; i++)
             {
                 for (int j = 0; j < array[i].Length; j++)
@@ -74,7 +74,7 @@ namespace HW3_3
                     counter += 1;
                 }
             }
-            Console.WriteLine("Counted the average value of the array: ");
+            Console.WriteLine("Average: ");
             return (double)sum / (double)counter;
         }
 
@@ -90,7 +90,7 @@ namespace HW3_3
                     }
                 }
             }
-            Console.WriteLine("All even elements were changed with multiplication of their indices: ");
+            Console.WriteLine("Elements changed: ");
         }
     }
 }
