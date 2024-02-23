@@ -1,6 +1,6 @@
 namespace HW3_3
 {
-    public abstract class Array : IArrayBase
+    public abstract class Array : IArray
     {
         public bool Init { get; set; }
 
