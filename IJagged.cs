@@ -1,6 +1,6 @@
 namespace HW3_3
 {
-    public interface IJaggedArray
+    public interface IJagged
     {
         void ChangeEvenNums();
     }
