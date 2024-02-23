@@ -1,5 +1,5 @@
 namespace HW3_3 {
-    public interface ISingleArray
+    public interface ISingle
     {
         void ClearArray();
     }
