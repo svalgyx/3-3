@@ -4,7 +4,7 @@ namespace HW3_3
     {
         private int Len { get; set; }
         private int[] array;
-        public SingleArray(string init, int len) : base(init)
+        public Single(string init, int len) : base(init)
         {
             Len = len;
             array = new int[len];
@@ -71,7 +71,7 @@ namespace HW3_3
             return false;
         }
 
-        public void ClearArray()
+        public void ClearAr()
         {
             int[] clear_array = new int[array.Length];
             int count = 0;
